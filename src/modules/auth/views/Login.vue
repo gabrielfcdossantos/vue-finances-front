@@ -6,7 +6,7 @@
         <v-card class="elevation-12">
 
           <v-toolbar color="primary">
-            <v-toobar-title>{{ texts.toolbar }}</v-toobar-title>
+            <v-toolbar-title>{{ texts.toolbar }}</v-toolbar-title>
             <v-spacer></v-spacer>
             <v-progress-circular
               v-show="isLoading"
@@ -73,7 +73,7 @@
           {{ error }}
           <v-btn
           color="pink"
-          flat
+          text
           icon
           @click="showSnackbar = false"
           ></v-btn>
@@ -98,6 +98,7 @@ export default {
     isLogin: true,
     isLoading: false,
     showSnackbar: false,
+    error: '',
     user: {
       name:'',
       email: '',
